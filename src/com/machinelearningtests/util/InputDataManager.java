@@ -52,6 +52,7 @@ public class InputDataManager {
 	{
 		byte[] encoded = Files.readAllBytes(Paths.get(path));
 		return new String(encoded);
+		// test
 	}
 
 	@SuppressWarnings("unchecked")
