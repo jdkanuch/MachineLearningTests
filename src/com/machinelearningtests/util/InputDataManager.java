@@ -12,6 +12,9 @@ import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 
+import weka.core.Instances;
+import weka.core.converters.ConverterUtils.DataSource;
+
 public class InputDataManager {
 
 	/* Handles input data in Yaml formats
@@ -27,6 +30,9 @@ public class InputDataManager {
 	 *   // to parse a yaml string into a java map object:
 	 *   HashMap<Object,Object> confMap = InputDataManager.parseYaml(strYaml);
 	 *   
+	 *   // To use data manager for CSV data
+	 *     
+	 *     
 	 *   // To retrieve the data contained in the HashMap
 	 *   // Use an object mapper
 	 *   ObjectMapper mapper = new ObjectMapper();
@@ -61,4 +67,15 @@ public class InputDataManager {
 		HashMap<Object,Object> yMap = mapper.readValue(yamlSource, HashMap.class);
 		return yMap;
 	}
+	
+	public Instances loadCSVData(String path) throws Exception{
+		DataSource src = new DataSource(path);
+		Instances inst = src.getDataSet();
+		//inst.setClassIndex(inst.numAttributes() -1);
+		
+		return inst;
+		
+	}
+
+	
 }

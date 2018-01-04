@@ -16,5 +16,9 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Program Files/Weka-3-8/weka.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jdkanuch/Documents/p/programming_stuff/java_dev/Libraries/weka-dependencies/arpack_combined_all.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jdkanuch/Documents/p/programming_stuff/java_dev/Libraries/weka-dependencies/core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jdkanuch/Documents/p/programming_stuff/java_dev/Libraries/weka-dependencies/mtj.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
