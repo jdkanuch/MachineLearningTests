@@ -29,9 +29,7 @@ public class RegressionSystem {
 		SMOreg smoReg = new SMOreg();
 		smoReg.buildClassifier(ds);
 		System.out.println(smoReg);
-		
-		Plot2D plot = new Plot2D();
-		plot.setInstances(ds);
+
 		
 	}
 
